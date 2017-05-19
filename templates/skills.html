@@ -1,0 +1,129 @@
+{% extends "index.html" %}
+
+{% block nav %}
+{% endblock %}
+
+
+{% block header %}
+{% endblock %}
+
+{% block sidenav %}
+    <a id="menu-toggle" href="#" class="side"><img src ="static/img/fslogo.png" /></a>
+    <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="toggle"></a>
+        <li>
+            <a href="/" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="/about#aboutme" onclick=$("#menu-close").click();>About Me</a>
+        </li>
+
+        <li>
+            <a href="/skills#skills" onclick=$("#menu-close").click();>Skills</a>
+        </li>
+        <li>
+            <a href="/portfolio#portfolio" onclick=$("#menu-close").click();>Projects</a>
+        </li>
+        <li>
+            <a href="/contact#contact" onclick=$("#menu-close").click();>Contact</a>
+        </li>
+    </ul>
+    </nav>
+{% endblock %}
+
+
+{% block posters %}
+{% endblock %}
+
+{% block skills %}
+
+<!-- Skills -->
+    <section id="skills">
+            <div class="skills">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="fontheaders">Skills</h1>
+                        <h1 class="glyph">y</h1>
+
+                    </div>
+                </div>
+                <div class="row logos">
+                    <div class="col-md-6 col-sm-12">
+                        <h3 class="skillpage"> Languages</h3>
+                        <hr class="small">
+                        <img src="static/img/html.png" alt="">
+                        <img src="static/img/js5.png" alt="">
+                        <img src="static/img/csslogo.png" alt="">
+                        <div>
+                        <img src="static/img/python.png" alt="">
+                        <img src="static/img/jquery.png" alt="">
+                        </div>
+                    </div>
+                <div class="col-md-6 col-sm-12">
+                    <h3 class="skillpage"> Databases</h3>
+                    <hr class="small">
+                    <img src="static/img/mysql.png" alt=""> <img src="static/img/postsresql.png" alt=""> <img src="static/img/mongodb.png" alt="">
+                </div>
+                </div>
+                <div class="row logos">
+                    <div class="col-md-12 col-sm-1">
+                    </div>
+                <div class="row logos">
+                    <div class="col-md-6  col-sm-12">
+                        <h3 class="skillpage">Frameworks</h3>
+                        <hr class="small">
+                        <img src="static/img/nodejs.png" alt="">
+                        <img src="static/img/flask.png" alt="">
+                        <div>
+                        <img src="static/img/bootstrap-logo.png" alt="">
+                        <img src="static/img/react.png" alt="">
+                        <!-- Express -->
+                        </div>
+                    </div>
+                        <div class="col-md-6 col-sm-12">
+                            <h3 class="skillpage"> Technologies</h3>
+                            <hr class="small">
+                            <div>
+                            <img src="static/img/AWS.png" alt="">
+                            <img src="static/img/apache.png" alt="">
+                            <img src="static/img/heroku.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+{% endblock %}
+
+
+{% block footer %}
+    <br /><br /><div class="footer"><br /><br />
+        <nav class="navbar-default navbar-bottom" role="navigation">
+            <br />
+        <div class="container">
+            <div class="row">
+                <br />
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <br /><br />
+              <h4><br /><strong>Kristine O'Neil</strong>
+              </h4>
+                  Houston, TX
+                  <p>
+              <ul class="list-inline">
+                  <li><a href="mailto:kellis1286@gmail.com"><i class="contacts fa fa-envelope-o fa-fw"></i> </a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/in/kristine-o-neil-a224198a" target="_blank"> <i class="contacts fa fa-linkedin-square" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="https://github.com/koneil612" target="_blank"><i class="contacts fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+                  <li> <a href="https://angel.co/kristine-o-neil" target="_blank"><i class="contacts fa fa-angellist" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
+                </p>
+              <p class="text-muted"> <hr class="small">Copyright &copy; kristineoneil.com 2017</p>
+                </div>
+            </div>
+        </div>
+        </nav>
+{% endblock %}

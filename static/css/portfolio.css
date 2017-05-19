@@ -1,0 +1,361 @@
+/* Global Styles */
+
+@font-face {
+	font-family: Playlist-Script;
+	src: url('../font/Playlist Script.otf') format("opentype");
+}
+
+@font-face {
+	font-family: Playlist-Ornament;
+	src: url('../font/Playlist Ornament.otf') format("opentype");
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	font-family: "Gill Sans";
+	background: fixed;
+	background-image: url("../img/backgroundsm.png");
+	background-size: cover;
+	background-repeat:space;
+}
+
+.navbar {
+	/*height: 100px;*/
+	border: none;
+	background: transparent;
+}
+
+.very-top {
+	padding-top: 15px;
+	float: left;
+}
+
+.topnav li {
+	display: inline-block;
+	text-decoration: none;
+	padding-right: 10px;
+
+}
+.topnav li a {
+	background: none;
+	display: inline-block;
+	text-decoration: none;
+	color: #B44F5C;
+}
+
+/*side navbar stuff */
+#sidebar-wrapper {
+  	z-index: 1000;
+  	position: fixed;
+  	right: 0;
+  	height: 100%;
+  	/*transform: translateX(250px);*/
+  	overflow-y: auto;
+  	background: transparent;
+
+}
+.sidebar-nav {
+  position: absolute;
+  top: 120px;
+  width: 250px;
+  margin: 0;
+  /*padding-right: 55px;*/
+  list-style: none; }
+
+.sidebar-nav li {
+	text-align: right;
+	line-height: 30px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #5d1906; }
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #5d1906;
+  background: rgba(255, 255, 255, 0.2); }
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none; }
+
+.sidebar-nav > .sidebar-brand {
+	height: 55px;
+	font-size: 18px;
+	line-height: 55px; }
+
+.sidebar-nav > .sidebar-brand a {
+  	color: #999; }
+
+.sidebar-nav > .sidebar-brand a:hover {
+  	color: #B44F5C;
+  	background: none; }
+
+#menu-toggle {
+  	z-index: 1;
+  	position: fixed;
+  	top: 0;
+  	right: 0; }
+
+#sidebar-wrapper.active {
+  right: 50px;
+  width: 250px;
+  }
+
+.toggle {
+  margin: 5px 5px 0 0; }
+
+
+ @media only screen and (max-width: 768px) {
+      /* For mobile phones: */
+	  .sidebar-nav {
+  	  position: absolute;
+  	  /*top: 120px;*/
+  	  /*width: 150px;*/
+  	  margin: 0;
+  	  /*padding-right: 55px;*/
+  	  list-style: none; }
+
+	  #sidebar-wrapper.active {
+	    right: 50px;
+	    /*width: 250px;*/
+	    }
+  }
+
+.nav-header {
+	/*height: 120px;*/
+	padding: 0px;
+}
+
+#menu-toggle img{
+   max-height: 180px;
+   overflow: visible;
+   padding-top: 0;
+   padding-bottom: 0;
+}
+.skillpage {
+	color:white;
+	font-size: 2em;
+}
+
+ul#cyclelist {
+	font-family: Playlist-Script;
+	color: white;
+	font-size: 2.5em;
+	padding-left: 15;
+    /*position:relative;*/
+    overflow:hidden;
+    height:100px;
+	width: 19.5%;
+	margin: auto;
+}
+ul#cyclelist li {
+ text-align: center;
+   list-style:none;
+   font-size:1.4em;
+   height: 100%;
+   opacity:0;
+   position:absolute;
+}
+
+
+/* Call to Action */
+.call-to-action {
+  padding: 50px 0; }
+
+.call-to-action .btn {
+  margin: 10px; }
+
+
+/* Custom Horizontal Rule */
+hr.small {
+    max-width: 100px;
+}
+
+/*    Body   */
+
+.text-vertical-center {
+	font-family: 'Gill Sans';
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+	color: #751721;
+}
+.fontheaders {
+	margin: 0;
+    padding: 0;
+	padding-left: 20px;
+    font-family: Playlist-Script;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+.glyph {
+	margin: 0;
+    padding: 0;
+	padding-left: 20px;
+    font-family: 'Playlist-Ornament';
+    font-size: 3.5em;
+    font-weight: 700;
+}
+
+.text-center h2 , .contact .maintext{
+	font-size: 20px;
+	font-family: "Gill Sans";
+	text-align: center;
+
+
+}
+.text-center {
+    color: white;
+	display: table-cell;
+	text-align: center;
+}
+
+.main-body {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+}
+#headshot {
+	height: 250px;
+	border-radius: 35px;
+	vertical-align: middle;
+	padding: 10px;
+	padding-bottom: 25px;
+}
+.header {
+	top: 25%;
+	bottom: auto;
+	vertical-align: middle;
+    display: table;
+    position: relative;
+    width: 100%;
+	height: 100%;
+	text-align: center;
+	color:#5d1906;
+}
+
+/*#posters img{
+	max-width: 100%;
+}*/
+
+.xyz {
+ margin-left: 5px;
+
+ margin-right: 5px;
+}
+
+.d {
+    margin-top: -15px;
+	margin-left: -10px;
+}
+
+
+#portfolio, #contact, #aboutme, #skills {
+	padding-top: 20px;
+    position: relative;
+	color:#5d1906;
+	text-align: center;
+	top: 10%;
+
+}
+
+#portfolio, #contact h1 {
+	color:#5d1906;
+}
+
+.flip-container {
+	perspective: 1000px;
+	height: 300px
+}
+
+.flip-container a {
+text-decoration: none;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(360deg);
+}
+
+.front, .back {
+	width: 400px;
+	height: 200px;
+}
+
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+	background-color: white;
+
+}
+
+.portfolio, .contact {
+    padding: 50px 0;
+}
+
+.logos img {
+	/*width: 50px;*/
+	height: 90px
+}
+
+
+/* Portfolio */
+.img-portfolio {
+    margin: 0 auto;
+	height: 250px;
+	width: 400px;
+}
+
+
+/* Button  */
+.button {
+  border-radius: 0;
+  color: white;
+}
+.glyph-q a{
+  border-radius: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.glyph-q {
+	margin: 0;
+    padding: 0;
+	color: white;
+    font-family: 'Playlist-Ornament';
+    font-size: 3.5em;
+    font-weight: 700;
+	transform: rotate(90deg);
+}
+.contacts {
+	color: white;
+}
+/* Footer */
+
+.navbar-bottom {
+	/*position: absolute;*/
+	width: 100%;
+	background-color: transparent;
+}

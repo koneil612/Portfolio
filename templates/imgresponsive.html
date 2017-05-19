@@ -1,0 +1,98 @@
+//smtplib *****email using smtp ssl port 465****
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        hi
+        <div>
+        <img src="/img/posters2.png" width="1280" height="900" border="0" usemap="#map" />
+
+        <map name="map">
+        <area shape="rect" coords="71,415,268,566" href="/index.html" />
+        <area shape="rect" coords="301,391,440,604" href="/about#about.html" />
+        <area shape="rect" coords="483,444,726,817" href="/skills#skills.html" />
+        <area shape="rect" coords="765,363,1118,627" href="/portfolio#portfolio.html" />
+        <area shape="rect" coords="771,692,873,831" href="www.github.com/koneil1286" />
+        <area shape="rect" coords="910,694,1034,799" href="/resume.html" />
+        <area shape="rect" coords="1066,688,1204,839" href="/contact#contact.html" />
+    </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- <script src="jquery.rwdImageMaps.min.js"></script> -->
+<!-- <script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script> -->
+<script>
+$(document).ready(function($) {
+	$.fn.rwdImageMaps = function() {
+		var $img = this;
+
+		var rwdImageMap = function() {
+			$img.each(function() {
+				if (typeof($(this).attr('usemap')) == 'undefined')
+					return;
+
+				var that = this,
+					$that = $(that);
+
+				// Since WebKit doesn't know the height until after the image has loaded, perform everything in an onload copy
+				$('<img />').on('load', function() {
+					var attrW = 'width',
+						attrH = 'height',
+						w = $that.attr(attrW),
+						h = $that.attr(attrH);
+
+					if (!w || !h) {
+						var temp = new Image();
+						temp.src = $that.attr('src');
+						if (!w)
+							w = temp.width;
+						if (!h)
+							h = temp.height;
+					}
+
+					var wPercent = $that.width()/100,
+						hPercent = $that.height()/100,
+						map = $that.attr('usemap').replace('#', ''),
+						c = 'coords';
+
+					$('map[name="' + map + '"]').find('area').each(function() {
+						var $this = $(this);
+						if (!$this.data(c))
+							$this.data(c, $this.attr(c));
+
+						var coords = $this.data(c).split(','),
+							coordsPercent = new Array(coords.length);
+
+						for (var i = 0; i < coordsPercent.length; ++i) {
+							if (i % 2 === 0)
+								coordsPercent[i] = parseInt(((coords[i]/w)*100)*wPercent);
+							else
+								coordsPercent[i] = parseInt(((coords[i]/h)*100)*hPercent);
+						}
+						$this.attr(c, coordsPercent.toString());
+					});
+				}).attr('src', $that.attr('src'));
+			});
+		};
+		$(window).resize(rwdImageMap).trigger('resize');
+
+		return this;
+	};
+})(jQuery);
+</script>
+    </body>
+</html>

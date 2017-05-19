@@ -1,0 +1,78 @@
+{% extends "index.html" %}
+{% block sidenav %}
+    <a id="menu-toggle" href="#" class="side"><img src ="static/img/fslogo.png" /></a>
+    <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="toggle"></a>
+        <li>
+            <a href="/" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="/about#aboutme" onclick=$("#menu-close").click();>About Me</a>
+        </li>
+
+        <li>
+            <a href="/skills#skills" onclick=$("#menu-close").click();>Skills</a>
+        </li>
+        <li>
+            <a href="/portfolio#portfolio" onclick=$("#menu-close").click();>Projects</a>
+        </li>
+        <li>
+            <a href="/contact#contact" onclick=$("#menu-close").click();>Contact</a>
+        </li>
+    </ul>
+    </nav>
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block contact %}
+<!-- Contact -->
+<!-- <div class="col-lg-12 text-center">
+</div> -->
+<section id="contact">
+    <div class="row">
+        <div class="col-lg-12  text-center">
+            <h1 class="maintext">Your awesome message has been sent! <p>
+                Feel free to look around more
+            </p></h1>
+            <h1 class="glyph">y</h1>
+            <br /><br />
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+</div>
+
+{% block footer %}
+    <div class="footer">
+        <br />
+        <nav class="navbar-default navbar-bottom" role="navigation">
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <br />
+              <h4><strong>Kristine O'Neil</strong>
+              </h4>
+                  Houston, TX
+                  <p>
+              <ul class="list-inline">
+                  <li><a href="mailto:kellis1286@gmail.com"><i class="contacts fa fa-envelope-o fa-fw"></i> </a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/in/kristine-o-neil-a224198a" target="_blank"> <i class="contacts fa fa-linkedin-square" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="https://github.com/koneil612" target="_blank"><i class="contacts fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+                  <li> <a href="https://angel.co/kristine-o-neil" target="_blank"><i class="contacts fa fa-angellist" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
+                </p>
+              <p class="text-muted"> <hr class="small">Copyright &copy; kristineoneil.com 2017</p>
+                </div>
+            </div>
+        </div>
+        </nav>
+{% endblock %}

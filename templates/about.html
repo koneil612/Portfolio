@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+
+{% block header %}
+{% endblock %}
+
+{% block sidenav %}
+    <a id="menu-toggle" href="#" class="side"><img src ="static/img/fslogo.png" /></a>
+    <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="toggle"></a>
+        <li>
+            <a href="/" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="/about#aboutme" onclick=$("#menu-close").click();>About Me</a>
+        </li>
+
+        <li>
+            <a href="/skills#skills" onclick=$("#menu-close").click();>Skills</a>
+        </li>
+        <li>
+            <a href="/portfolio#portfolio" onclick=$("#menu-close").click();>Projects</a>
+        </li>
+        <li>
+            <a href="/contact#contact" onclick=$("#menu-close").click();>Contact</a>
+        </li>
+    </ul>
+    </nav>
+{% endblock %}
+
+{% block posters %}
+{% endblock %}
+
+
+{% block about %}
+
+<!-- About Me -->
+<div>
+    <section id="aboutme">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="static/img/socorro.jpeg" id="headshot" /><br />
+                    <h1 class="fontheaders" id="aboutme">A Bit About Who I Am</h1>
+                <h1 class="glyph">y</h1>
+                    <br />
+                    <p class="maintext"> Hi, I'm Kristine, a junior full-stack developer living in South East Houston. I was born and raised in Boston, MA, and I became an honorary Texan 6 years ago, according to the coffee mug I received. </p>
+                    <p class="maintext"> Between programming and adulting, you will usually find me in my psuedo craft room (our dining room) making gifts for people. To me, crafting is a lot like programming; it can be a lot of stress but the end result and client satifsaction are what make it worthwhile. If I have any time left, you might find me out running (I try), reading, having wine with friends or even scuba diving. </p>
+                    <p class="maintext">I'm a glass-half-full kind of gal, always looking at the positive side in life. Enough about me though, relax and have a look around. Any questions? Please reach out.  <i class="fa fa-heart" aria-hidden="true"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

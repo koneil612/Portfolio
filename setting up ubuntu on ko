@@ -1,0 +1,70 @@
+ssh-add ~/Downloads/amazonkey.pem 
+Identity added: /Users/Kristine/Downloads/amazonkey.pem (/Users/Kristine/Downloads/amazonkey.pem)
+Kristines-MacBook-Pro:~ Kristine$ ssh ubuntu@kristineoneil.com
+The authenticity of host 'kristineoneil.com (35.161.143.181)' can't be established.
+ECDSA key fingerprint is SHA256:iNo3TgpnqizPy/L/V8UZ32ArcY/9Wf+TyJmI6uuhJBg.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'kristineoneil.com' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-53-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+66 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Mon Jan 16 19:56:02 2017 from 50.224.17.90
+ubuntu@ip-172-31-4-244:~$ sudo vim /etc/hosts
+ubuntu@ip-172-31-4-244:~$ sudo su -
+root@ip-172-31-4-244:~# cd /etc/apache2/sites-enabled/
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# ls
+000-default.conf  FlaskApp.conf
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# vim kristineoneil.com.conf
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# mv kristineoneil.com.conf ../sites-available
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# ln -s ../sites-available/kristineoneil.com.conf kristineoneil.com.conf
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# ls
+000-default.conf  FlaskApp.conf  kristineoneil.com.conf
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# ls lah
+ls: cannot access 'lah': No such file or directory
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# ls -lah
+total 8.0K
+drwxr-xr-x 2 root root 4.0K Feb  3 21:22 .
+drwxr-xr-x 8 root root 4.0K Jan  6 16:19 ..
+lrwxrwxrwx 1 root root   35 Jan  6 16:13 000-default.conf -> ../sites-available/000-default.conf
+lrwxrwxrwx 1 root root   32 Jan  6 16:50 FlaskApp.conf -> ../sites-available/FlaskApp.conf
+lrwxrwxrwx 1 root root   41 Feb  3 21:22 kristineoneil.com.conf -> ../sites-available/kristineoneil.com.conf
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# service apache2 restart
+Job for apache2.service failed because the control process exited with error code. See "systemctl status apache2.service" and "journalctl -xe" for details.
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# service apache2 restart
+Job for apache2.service failed because the control process exited with error code. See "systemctl status apache2.service" and "journalctl -xe" for details.
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# mkdir /var/www/html/www.kristineoneil.com
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# service apache2 restart
+Job for apache2.service failed because the control process exited with error code. See "systemctl status apache2.service" and "journalctl -xe" for details.
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# sudo vim ../sites-available/kristineoneil.com.conf 
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# service apache2 restart
+root@ip-172-31-4-244:/etc/apache2/sites-enabled# cd /var/www/html/
+root@ip-172-31-4-244:/var/www/html# ls
+index.html  www.kristineoneil.com
+root@ip-172-31-4-244:/var/www/html# mv www.kristineoneil.com kristineoneil.com/
+root@ip-172-31-4-244:/var/www/html# ls
+index.html  kristineoneil.com
+root@ip-172-31-4-244:/var/www/html# cd kristineoneil.com/
+root@ip-172-31-4-244:/var/www/html/kristineoneil.com# vim index.html
+root@ip-172-31-4-244:/var/www/html/kristineoneil.com# ls
+index.html
+root@ip-172-31-4-244:/var/www/html/kristineoneil.com# exit
+logout
+ubuntu@ip-172-31-4-244:~$ sudo mv Portfolio/ /var/www/html/kristineoneil.com
+ubuntu@ip-172-31-4-244:~$ sudo mv Portfolio/index.html  /var/www/html/kristineoneil.com/
+mv: cannot stat 'Portfolio/index.html': No such file or directory
+ubuntu@ip-172-31-4-244:~$ sudo mv /var/www.html/kristineoneil.com/Portfolio/index.html  /var/www/html/kristineoneil.com/
+mv: cannot stat '/var/www.html/kristineoneil.com/Portfolio/index.html': No such file or directory
+ubuntu@ip-172-31-4-244:~$ sudo mv /var/www/html/kristineoneil.com/Portfolio/index.html /var/www/html/kristineoneil.com/
+ubuntu@ip-172-31-4-244:~$ sudo mv /var/www/html/kristineoneil.com/Portfolio/static /var/www/html/kristineoneil.com/
+ubuntu@ip-172-31-4-244:~$ sudo mv /var/www/html/kristineoneil.com/Portfolio/templates /var/www/html/kristineoneil.com/

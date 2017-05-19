@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>- Kristine O'Neil - </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Icon for the site -->
+    <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
+
+    <!-- Custom CSS -->
+    <link href="static/css/portfolio.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+{% block sidenav %}
+{% endblock %}
+
+<!-- Header -->
+{% block header %}
+    <div class="container-fluid main-body">
+    <header id="top" class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                <h1 class="fontheaders">Kristine O'Neil</h1>
+                <h1 class="glyph">y</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                    <div>
+                    <ul id="cyclelist">
+                    <li>Developer</li>
+                    <li>Builder</li>
+                    <li>Back End-er</li>
+                    <li>Full Stack-er</li>
+                    <li>Problem Solver</li>
+                    <li>Front End-er</li>
+                    <li>Thinker</li>
+                </ul>
+                    </div>
+                </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="glyph-q"><a href="#posters">q</p></a>
+            </div>
+        </div>
+            </div>
+        </div>
+        <br />
+    </header>
+{% endblock %}
+
+
+<!-- Contact -->
+    {% block contact %}
+    {% endblock %}
+<!-- Posters -->
+{% block posters %}
+    <section id="posters">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <a style="display:inline-block" href="/">
+                        <div><img src="../static/img/homeposter.png" /></div>
+                    </a>
+                    <a style="display:inline-block" href="/about#about">
+                        <div class="xyz"><img src="../static/img/aboutposter.png" />
+                        <div>
+                            <!-- <a style="display:inline-block" href="/contact">
+                                <div class="d"><img src="../static/img/contactposter.png" /></div>
+                            </a> -->
+                        </div>
+                        </div>
+                    </a>
+                    <a style="display:inline-block" href="/skills#skills">
+                        <div><img src="../static/img/skillsposter.png" /></div>
+                    </a>
+                    </div>
+                <div class="col-lg-5">
+                    <a style="display:inline-block" href="/portfolio">
+                        <div class="e"> <img src="../static/img/portfolioposter.png" /> </div>
+                    </a>
+                    <div>
+                        <a style="display:inline-block" href="http://www.github.com/koneil612">
+                            <div class="d"><img src="../static/img/githubposter.png" /></div>
+                        </a>
+                        <a style="display:inline-block" href="https://drive.google.com/open?id=0BxPLPdxlUTtOdFNsVU5GemtubTQ" target="_blank">
+                            <div class="d xyz"><img src="../static/img/resumeposter.png" /></div>
+                        </a>
+                        <a style="display:inline-block" href="/contact">
+                            <div class="d"><img src="../static/img/contactposter.png" /></div>
+                        </a>
+                        <!-- <a style="display:inline-block" href="https://www.linkedin.com/in/kristine-o-neil-a224198a">
+                            <div class="d"><img src="../static/img/linkedinposter.png" /></div>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+<!-- About Me -->
+    {% block about %}
+    {% endblock %}
+<!-- Portfolio -->
+    {% block portfolio %}
+    {% endblock %}
+<!-- Skills -->
+    {% block skills %}
+    {% endblock %}
+
+</div>
+<!-- Footer -->
+<br />
+{% block footer %}
+    <div class="footer">
+        <nav class="navbar-default navbar-bottom" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+              <h4><strong>Kristine O'Neil</strong>
+              </h4>
+                  Houston, TX
+                  <p>
+              <ul class="list-inline">
+                  <li><a href="mailto:kellis1286@gmail.com"><i class="contacts fa fa-envelope-o fa-fw"></i> </a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/in/kristine-o-neil-a224198a" target="_blank"> <i class="contacts fa fa-linkedin-square" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="https://github.com/koneil612"target="_blank"><i class="contacts fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+                  <li> <a href="https://angel.co/kristine-o-neil" target="_blank"><i class="contacts fa fa-angellist" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
+                </p>
+              <p class="text-muted"> <hr class="small">Copyright &copy; kristineoneil.com 2017</p>
+                </div>
+            </div>
+        </div>
+        </nav>
+{% endblock %}
+    </div>
+    <script>
+    $(document).ready(function() {
+        var j = 0;
+        var delay = 2500; //millisecond delay between cycles
+        function cycleThru(){
+            var jmax = $("ul#cyclelist li").length -1;
+            $("ul#cyclelist li:eq(" + j + ")")
+            .animate({"opacity" : "1"} ,400)
+            .animate({"opacity" : "1"}, delay)
+            .animate({"opacity" : "0"}, 400, function(){
+                (j == jmax) ? j=0 : j++;
+                cycleThru();
+            });
+        };
+
+        cycleThru();
+
+    });
+
+    </script>
+</body>
+<script src="static/js/jquery.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script>
+
+// sets the sidebar menu to appear after header goes away
+// $(document).ready(function () {
+//     sidebar();
+// });
+//
+// $(window).scroll(function () {
+//     sidebar();
+// });
+
+// function sidebar() {
+// Closes the sidebar menu
+$("#menu-close").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+
+// Opens the sidebar menu
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#sidebar-wrapper").toggleClass("active");
+});
+// Scrolls to the selected menu item on the page
+$(function() {
+    $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+</script>
+
+
+
+</html>

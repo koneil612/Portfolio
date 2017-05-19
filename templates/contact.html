@@ -1,0 +1,134 @@
+{% extends "index.html" %}
+{% block sidenav %}
+    <a id="menu-toggle" href="#" class="side"><img src ="static/img/fslogo.png" /></a>
+    <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="toggle"></a>
+        <li>
+            <a href="/" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="/about#aboutme" onclick=$("#menu-close").click();>About Me</a>
+        </li>
+
+        <li>
+            <a href="/skills#skills" onclick=$("#menu-close").click();>Skills</a>
+        </li>
+        <li>
+            <a href="/portfolio#portfolio" onclick=$("#menu-close").click();>Projects</a>
+        </li>
+        <li>
+            <a href="/contact#contact" onclick=$("#menu-close").click();>Contact</a>
+        </li>
+    </ul>
+    </nav>
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block posters %}
+{% endblock %}
+
+{% block contact %}
+<!-- Contact -->
+    <!-- <div class="col-lg-12 text-center">
+    </div> -->
+    <section id="contact">
+        <div class="row">
+            <div class="col-lg-12  text-center">
+                <h1 class="fontheaders">Cont@ct Me</h1>
+                <h1 class="glyph">y</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-item">
+                    <p class="">Resume</p>
+                    <a href="https://drive.google.com/open?id=0BxPLPdxlUTtOdFNsVU5GemtubTQ" target="_blank"><i class="contacts fa fa-book fa-3x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p class="">Email</p>
+                <a href="mailto:kellis1286@gmail.com"><i class="contacts fa fa-envelope-o fa-3x"></i> </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <p class="maintext">Linked In</p>
+                <a href="https://www.linkedin.com/in/kristine-o-neil-a224198a" target="_blank"> <i class="contacts fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-md-4">
+                <p class="maintext">Git Hub</p>
+                <a href="https://github.com/koneil612" target="_blank"><i class="contacts fa fa-github fa-3x" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-md-4">
+                <p class="maintext">Angel List</p>
+                <a href="https://angel.co/kristine-o-neil" target="_blank"><i class="contacts fa fa-angellist fa-3x" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <br /><br />
+        <div class="contact">
+                <div class="row">
+                    <form id="contact_form" action="/contactsend" method="POST" enctype="multipart/form-data">
+                        <div>
+                            <p>Maybe you want to work with me. (I'm a good catch). Maybe you just want to find out some more information about myself. (Like where I have traveled too). </p>
+
+                            <p>Or maybe you just want to say hello. (That's cool too!)</p>
+                        </div>
+                        <div class="row">
+	                          <label for="name">Lets start with your name: </label><br />
+                              <input id="name" class="input" name="name" type="text" value="" placeholder="Mine's Kristine" size="30" /><br />
+                    	</div>
+                        <div class="row">
+                            <label for="email">Your email will help me get back to you:</label><br />
+                            <input id="email" class="input" name="email" type="text" value="" placeholder="kellis1286@gmail.com" size="30" /><br />
+                        </div>
+                        <div class="row">
+                            <label for="message">Your message:</label><br />
+                            <textarea id="message" class="input" name="message" rows="7" placeholder="Put something charming here :)" cols="30"></textarea><br />
+                            <input id="submit_button" type="submit" value="Send it Over" />
+                        </div>
+                        </form >
+                        <br />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <br />
+    </section>
+{% endblock %}
+</div>
+
+{% block footer %}
+    <div class="footer">
+        <br />
+        <nav class="navbar-default navbar-bottom" role="navigation">
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <br />
+              <h4><strong>Kristine O'Neil</strong>
+              </h4>
+                  Houston, TX
+                  <p>
+              <ul class="list-inline">
+                  <li><a href="mailto:kellis1286@gmail.com"><i class="contacts fa fa-envelope-o fa-fw"></i> </a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/in/kristine-o-neil-a224198a" target="_blank"> <i class="contacts fa fa-linkedin-square" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="https://github.com/koneil612" target="_blank"><i class="contacts fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+                  <li> <a href="https://angel.co/kristine-o-neil" target="_blank"><i class="contacts fa fa-angellist" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
+                </p>
+              <p class="text-muted"> <hr class="small">Copyright &copy; kristineoneil.com 2017</p>
+                </div>
+            </div>
+        </div>
+        </nav>
+{% endblock %}

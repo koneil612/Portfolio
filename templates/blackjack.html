@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Blackjack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/blackjack.css">
+    <script src="/static/js/blackjackclosure.js"></script>
+
+</head>
+
+<body>
+    <div>
+            <h1 class="heading">='s Blackjack</h1><br />
+    <hr />
+        </div>
+
+        <div class="buttons">
+            <button id="deal-button">Deal</button>
+            <button id="hit-button">Hit</button>
+            <button id="stand-button">Stand</button>
+            <!-- <button id="newgame-button">New Game</button> -->
+        </div>
+        <div class="container-fluid" id="messages">
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="player">Queen of Hearts:</p>
+                    <p id="dealer-points" class="points">
+                    </p>
+                </div>
+                <div class="col-md-7">
+                    <div id="dealer-hand" class="dealer-hand">
+                        <div id="f1_container">
+                            <div id="f1_card" class="shadow">
+                                <div class="front face" id="card-front">
+                                </div>
+                                <div class="back face center" id="card-back">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dealer-hand-faceup">
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-3">
+                      <div id="bank">
+                         <p class="bank betting">Bank:
+                         <p id="player-bank" id="betting">$1000
+                         </p></p>
+                         <p id="bet-increase" class="increase betting">Bet Amount: $
+                         <p class="betting" id="counter"></p></p>
+                         <button id="decrease-button">-</button>
+                         <button id="increase-button">+</button>
+                         <p id="bet-decrease" class="decrease">
+
+                         </p>
+                      </div>
+                  </div> -->
+                </div>
+            </div>
+            <div class="container-fluid" id="messages">
+                <div class="row">
+                    <div class="col-md-2">
+                        <p class="player">Player:</p>
+                        <p id="player-points" class="points"></p>
+                    </div>
+                    <div class="col-md-7">
+                        <div id="player-hand" class="player-hand">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    <div class="cat">
+                        <img src="static/bjimg/chesirecat.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+{% extends "index.html" %}
+
+{% block sidenav %}
+    <a id="menu-toggle" href="#" class="side"><img src ="static/img/fslogo.png" /></a>
+    <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="toggle"></a>
+        <li>
+            <a href="/" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="/about#aboutme" onclick=$("#menu-close").click();>About Me</a>
+        </li>
+
+        <li>
+            <a href="/skills#skills" onclick=$("#menu-close").click();>Skills</a>
+        </li>
+        <li>
+            <a href="/portfolio#portfolio" onclick=$("#menu-close").click();>Projects</a>
+        </li>
+        <li>
+            <a href="/contact#contact" onclick=$("#menu-close").click();>Contact</a>
+        </li>
+    </ul>
+    </nav>
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block posters %}
+{% endblock %}
+
+{% block portfolio %}
+<!-- Projects -->
+    <section id="portfolio">
+        <div class="backgroundcorks container-fluid portfolio">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h1 class="fontheaders">Projects</h1>
+                        <hr class="small">
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <p class="maintext">
+                            Fantasy Football Website
+                            </p><div>
+                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                                <div class="flipper">
+                                <div class="flipimg front">
+                                <a href="http://www.fantasychamps.xyz" target="_blank" class="flipimg">
+                                <img class="img-portfolio img-responsive" src="static/img/fantasychamps.png">
+                                </div>
+                                <div class="flipimg back">
+                                    Week-long SCRUM partner project using both front and back end development. Built a mobile friendly fantasy football site that uses Bootstrap and CSS on the front end and Python, Flask and PostgreSQL on the backend. And some help from an NFL Game API </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <p class="maintext">
+                            Blackjack
+                        </p>
+                        <div>
+                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                            <div class="flipper">
+                                <div class="flipimg front">
+                            <a href="/blackjack" target="_blank">
+                                <img class="img-portfolio img-responsive" src="static/img/bjscreen.png">
+                            </div>
+                            <div class="flipimg back">
+                                <p >
+                                    Alice in Wonderland themed Blackjack made with Javascript, JQuery, CSS and a lot of patience.
+                                </p>
+                            </div>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h1 class="fontheaders">Freelance</h1>
+                    <hr class="small">
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="portfolio-item">
+                        <p class="maintext">Dive Shop Website</p>
+                        <div>
+                            <img class="img-portfolio img-responsive" src="static/img/divezone.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="portfolio-item">
+                        <p class="maintext">E-Commerce Craft Site</p>
+                    <div>
+                        <img class="img-portfolio img-responsive" src="static/img/kcc.png">
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+            <br />
+        </section>
+{% endblock %}
+
+
+{% block footer %}
+    <div class="footer">
+        <nav class="navbar-default navbar-bottom" role="navigation">
+            <br />
+        <div class="container">
+            <div class="row">
+                <br />
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <br /><br />
+              <h4><strong>Kristine O'Neil</strong>
+              </h4>
+                  Houston, TX
+                  <p>
+              <ul class="list-inline">
+                  <li><a href="mailto:kellis1286@gmail.com"><i class="contacts fa fa-envelope-o fa-fw"></i> </a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/in/kristine-o-neil-a224198a" target="_blank"> <i class="contacts fa fa-linkedin-square" aria-hidden="true"></i></a>
+                  </li>
+                  <li><a href="https://github.com/koneil612"target="_blank"><i class="contacts fa fa-github" aria-hidden="true"></i></a>
+                  </li>
+                  <li> <a href="https://angel.co/kristine-o-neil" target="_blank"><i class="contacts fa fa-angellist" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
+                </p>
+              <p class="text-muted"> <hr class="small">Copyright &copy; kristineoneil.com 2017</p>
+                </div>
+            </div>
+        </div>
+        </nav>
+{% endblock %}
