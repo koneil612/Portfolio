@@ -34,79 +34,71 @@
 {% block portfolio %}
 <!-- Projects -->
     <section id="portfolio">
-        <div class="backgroundcorks container-fluid portfolio">
+        <div class="container-fluid portfolio-wrapper">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <h1 class="fontheaders">Projects</h1>
                         <hr class="small">
-                    <div class="row">
-                    <div class="col-md-6">
-                        <div class="portfolio-item">
-                            <p class="maintext">
-                            Fantasy Football Website
-                            </p><div>
-                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                                <div class="flipper">
-                                <div class="flipimg front">
-                                <a href="http://www.fantasychamps.xyz" target="_blank" class="flipimg">
-                                <img class="img-portfolio img-responsive" src="static/img/fantasychamps.png">
-                                </div>
-                                <div class="flipimg back">
-                                    Week-long SCRUM partner project using both front and back end development. Built a mobile friendly fantasy football site that uses Bootstrap and CSS on the front end and Python, Flask and PostgreSQL on the backend. And some help from an NFL Game API </a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </div>
-                    <div class="col-md-6">
-                        <div class="portfolio-item">
-                            <p class="maintext">
-                            Blackjack
-                        </p>
-                        <div>
-                        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                            <div class="flipper">
-                                <div class="flipimg front">
-                            <a href="/blackjack" target="_blank">
-                                <img class="img-portfolio img-responsive" src="static/img/bjscreen.png">
-                            </div>
-                            <div class="flipimg back">
-                                <p >
-                                    Alice in Wonderland themed Blackjack made with Javascript, JQuery, CSS and a lot of patience.
-                                </p>
-                            </div>
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-                <div class="col-md-10 col-md-offset-1">
-                    <h1 class="fontheaders">Freelance</h1>
-                    <hr class="small">
                 <div class="row">
                 <div class="col-md-6">
                     <div class="portfolio-item">
-                        <p class="maintext">Dive Shop Website</p>
-                        <div>
-                            <img class="img-portfolio img-responsive" src="static/img/divezone.png">
+                        <img src="static/img/fantasychamps.png">
+                        <div class="overlay" >
+                            <p class="portfolio-text"> Fantasy Champs <br />
+                            <h4 class="portfolio-glyph">y</h4>
+                            What Makes it Tick? <br/>
+                            HTML5, Bootstrap and CSS2 on the front-end. Python, Flask and PostgreSQL on the back-end. Some help from an NFL Game API </p>
+                            <a href="https://github.com/pbullion/FFwebdatabase" target="_blank"><button>Git Hub</button></a>
+        					<a href="http://www.fantasychamps.xyz" target="_blank" class="flipimg"><button>Live Site</button></a>
+					        <!-- <button class="code-button">Show Code</button> -->
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="portfolio-item">
-                        <p class="maintext">E-Commerce Craft Site</p>
-                    <div>
-                        <img class="img-portfolio img-responsive" src="static/img/kcc.png">
-                    </div>
+                        <img class="img-portfolio img-responsive" src="static/img/bjscreen.png">
+
+                        <div class="overlay">
+                            <p class="portfolio-text">Alice's Blackjack <br />
+                                <h4 class="portfolio-glyph">y</h4>
+                                What Makes it Tick? <br/>
+                                HTML5, Javascript, JQuery, CSS3
+                            </p>
+                                <a href="https://github.com/koneil612/BlackJack" target="_blank"><button>Git Hub</button></a>
+                                <a href="/blackjack" target="_blank"><button>Live Site</button></a>
+                        </div>
                     </div>
                 </div>
+
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h1 class="fontheaders">Freel@nce</h1>
+                            <hr class="small">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <img class="img-portfolio img-responsive" src="static/img/divezone.png">
+                            <div class="overlay" >
+                            <p class="portfolio-text">Dive Shop Website-Redesign</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portfolio-item">
+                            <img class="img-portfolio img-responsive" src="static/img/kcc.png">
+                            <div class="overlay">
+                            <p class="maintext">E-Commerce Craft Site</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
         </div>
             <br />
         </section>
