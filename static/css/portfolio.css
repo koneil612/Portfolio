@@ -153,7 +153,7 @@ ul#cyclelist {
 	width: 19.5%;
 	margin: auto;
 }
-ul#cyclelist li {
+#cyclelist li {
  text-align: center;
    list-style:none;
    font-size:1.4em;
@@ -183,7 +183,7 @@ hr.small {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-	color: #751721;
+	color: #5d1906;
 }
 .fontheaders {
 	margin: 0;
@@ -192,6 +192,11 @@ hr.small {
     font-family: Playlist-Script;
     font-size: 4.5em;
     font-weight: 700;
+}
+
+.fontheaders a {
+	text-decoration: none;
+	color: #5d1906;
 }
 
 .glyph {
@@ -268,6 +273,7 @@ hr.small {
 #portfolio, #contact h1 {
 	color:#5d1906;
 }
+
 
 
 /* Portfolio Page overlays   */
